@@ -1,7 +1,6 @@
 import { useCallback, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { IoRefresh } from 'react-icons/io5'
 import ScaleLoader from 'react-spinners/ScaleLoader'
 
 import Avatar from 'assets/avatar.png'
