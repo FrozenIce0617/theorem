@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider as ReduxProvider } from 'react-redux'
+
+import { ToastContainer } from 'react-toastify'
+
+import { store } from 'redux/store'
+
+import Router from './router'
+
+import 'react-toastify/dist/ReactToastify.css'
+
+const Main = () => {
+  return <Router />
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ReduxProvider store={store}>
+      <Main />
+      <ToastContainer />
+    </ReduxProvider>
+  )
 }
 
-export default App;
+export default App
